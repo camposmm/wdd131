@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="This website it is about Brazil">
+    <title>Brazil</title>
+    <meta name="author" content="Marcos Murilo Campos">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/css.css">
+    <link rel="stylesheet" href="styles/large-css.css" media="(min-width: 768px)">
+    <script src="scripts/js.js" defer></script>
+  </head>
+
+  <body>
+    <div class="brazil-page">
+      <!-- Header -->
+      <header class="brazil-header">
+        <h1>Brazil</h1>
+      </header>
+      
+      <!-- Green stripe -->
+      <div class="green-stripe"></div>
+      
+      <!-- Main content with hero image as background -->
+      <main class="main-content">
+        <!-- Data panel -->
+        <div class="data-panel">
+          <h2>Data</h2>
+          <div class="data-content">
+            <div class="data-row">
+              <span class="data-label">Area:</span>
+              <span class="data-value">8,515,767 sq kmm</span>
+            </div>
+            <div class="data-row">
+              <span class="data-label">Population:</span>
+              <span class="data-value">213,445,417</span>
+            </div>
+            <div class="data-row">
+              <span class="data-label">Capital:</span>
+              <span class="data-value">Brasilia</span>
+            </div>
+            <div class="data-row">
+              <span class="data-label">Languages:</span>
+              <span class="data-value">Portuguese</span>
+            </div>
+            <div class="data-row">
+              <span class="data-label">Currency:</span>
+              <span class="data-value">Brazilian Real</span>
+            </div>
+            <div class="data-row">
+              <span class="data-label">Time Zone:</span>
+              <span class="data-value">UTC-2 to UTC-</span>
+            </div>
+            <div class="data-row">
+              <span class="data-label">Calling Code:</span>
+              <span class="data-value">+55</span>
+            </div>
+            <div class="data-row">
+              <span class="data-label">Internet TLD:</span>
+              <span class="data-value">.br</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Weather panel -->
+        <div class="weather-panel">
+          <h2>Weather <span class="weather-icon-desktop">🌤️</span></h2>
+          <div class="weather-content">
+            <img 
+              src="images/weather-icon.png" 
+              alt="Sunny weather icon" 
+              class="weather-icon-mobile"
+            />
+            <div class="weather-data">
+              <div class="data-row">
+                <span class="data-label">Temperature:</span>
+                <span class="data-value">25 °C</span>
+              </div>
+              <div class="data-row">
+                <span class="data-label">Conditions:</span>
+                <span class="data-value">Sunny</span>
+              </div>
+              <div class="data-row">
+                <span class="data-label">Wind:</span>
+                <span class="data-value">8 km/h</span>
+              </div>
+              <div class="data-row">
+                <span class="data-label">Wind Chill:</span>
+                <span class="data-value" id="windchill">Calculating...</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      
+      <!-- Footer -->
+      <footer class="brazil-footer">
+        <p>©<span id="current-year"></span> Marcos Murilo Campos | Brazil</p>
+        <p class="last-modified">Last Modification: <span id="last-modified"></span></p>
+      </footer>
+    </div>
+
+  </body>
+</html>
+

@@ -1,0 +1,29 @@
+  /* Responsive Styles */
+  @media (min-width: 768px) {
+    .main-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 2rem;
+    }
+    
+    .data-panel {
+      flex: 0 0 45%;
+      margin: 0;
+      align-self: flex-start;
+    }
+    
+    .weather-panel {
+      flex: 0 0 30%;
+      margin: 0;
+      align-self: flex-end;
+    }
+    
+    .weather-icon-mobile {
+      display: none;
+    }
+    
+    .weather-icon-desktop {
+      display: inline;
+    }
+  }
