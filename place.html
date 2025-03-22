@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="This website it is about Brazil">
-    <title>Brazil</title>
+    <title>A view of Brazil</title>
     <meta name="author" content="Marcos Murilo Campos">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,6 +19,9 @@
       <!-- Header -->
       <header class="brazil-header">
         <h1>Brazil</h1>
+        <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="25" cy="25" r="20" fill="yellow" />
+        </svg>
       </header>
       
       <!-- Green stripe -->
@@ -32,7 +35,7 @@
           <div class="data-content">
             <div class="data-row">
               <span class="data-label">Area:</span>
-              <span class="data-value">8,515,767 sq kmm</span>
+              <span class="data-value">8,515,767 sq km</span>
             </div>
             <div class="data-row">
               <span class="data-label">Population:</span>
@@ -52,7 +55,7 @@
             </div>
             <div class="data-row">
               <span class="data-label">Time Zone:</span>
-              <span class="data-value">UTC-2 to UTC-</span>
+              <span class="data-value">UTC-2 to UTC-5</span>
             </div>
             <div class="data-row">
               <span class="data-label">Calling Code:</span>
@@ -69,11 +72,15 @@
         <div class="weather-panel">
           <h2>Weather <span class="weather-icon-desktop">🌤️</span></h2>
           <div class="weather-content">
-            <img 
-              src="images/weather-icon.png" 
-              alt="Sunny weather icon" 
-              class="weather-icon-mobile"
-            />
+            <picture>
+              <source srcset="images/weather-icon.webp" type="image/webp">
+              <source srcset="images/weather-icon.png" type="image/png">
+              <img 
+                src="images/weather-icon.png" 
+                alt="Sunny weather icon" 
+                class="weather-icon-mobile"
+              />
+            </picture>
             <div class="weather-data">
               <div class="data-row">
                 <span class="data-label">Temperature:</span>
@@ -102,7 +109,6 @@
         <p class="last-modified">Last Modification: <span id="last-modified"></span></p>
       </footer>
     </div>
-
   </body>
 </html>
 
