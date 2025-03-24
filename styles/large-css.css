@@ -26,4 +26,16 @@
   .weather-icon-desktop {
       display: inline;
   }
+  
+  .weather-icon-desktop-img {
+      display: block;
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 1rem auto;
+  }
+  
+  .weather-icon-desktop-img img {
+      width: 100%;
+      height: auto;
+  }
 }

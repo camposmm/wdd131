@@ -33,7 +33,7 @@
             <source media="(min-width: 1200px)" srcset="images/large.webp" type="image/webp">
             <source media="(min-width: 768px)" srcset="images/medium.webp" type="image/webp">
             <source srcset="images/small.webp" type="image/webp">
-            <img src="images/medium.jpg" alt="Brazil landscape" class="background-fallback">
+            <img src="images/medium.jpg" alt="Brazil landscape" class="background-fallback" loading="lazy">
         </picture>
         
         <!-- Data panel -->
@@ -79,15 +79,22 @@
         <div class="weather-panel">
           <h2>Weather <span class="weather-icon-desktop">🌤️</span></h2>
           <div class="weather-content">
-            <picture class="weather-icon-mobile">
-                <source srcset="images/weather-icon.webp" type="image/webp">
-                <source srcset="images/weather-icon.png" type="image/png">
-                <svg width="80" height="80" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Sunny weather icon">
-                    <circle cx="12" cy="12" r="5" fill="#FFD700"/>
-                    <path d="M12 2v2m0 16v2M4 12H2m20 0h-2m-2.5-6.5l-1.4 1.4m-9.9 9.9l-1.4 1.4m12.8-1.4l1.4 1.4m-9.9-9.9l1.4 1.4" 
-                          stroke="#FFA500" stroke-width="2" stroke-linecap="round"/>
-                </svg>
+            <!-- Mobile SVG icon -->
+            <div class="weather-icon-mobile">
+              <svg width="80" height="80" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Sunny weather icon">
+                <circle cx="12" cy="12" r="5" fill="#FFD700"/>
+                <path d="M12 2v2m0 16v2M4 12H2m20 0h-2m-2.5-6.5l-1.4 1.4m-9.9 9.9l-1.4 1.4m12.8-1.4l1.4 1.4m-9.9-9.9l1.4 1.4" 
+                      stroke="#FFA500" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            
+            <!-- Desktop image -->
+            <picture class="weather-icon-desktop-img">
+              <source srcset="images/weather-icon.webp" type="image/webp">
+              <source srcset="images/weather-icon.png" type="image/png">
+              <img src="images/weather-icon.png" alt="Sunny weather icon" loading="lazy">
             </picture>
+            
             <div class="weather-data">
               <div class="data-row">
                 <span class="data-label">Temperature:</span>
@@ -118,4 +125,3 @@
     </div>
   </body>
 </html>
-

@@ -149,6 +149,10 @@ body {
   margin: 0 auto 1rem auto;
 }
 
+.weather-icon-desktop-img {
+  display: none;
+}
+
 .weather-data {
   display: flex;
   flex-direction: column;
