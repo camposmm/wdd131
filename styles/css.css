@@ -1,198 +1,204 @@
 /* CSS Variables */
 :root {
-    --brazil-yellow: #ffea07;
-    --brazil-green: #007E3A;
-    --brazil-white: #ffffff;
-    --brazil-beige: #F5F1E6;
-  }
-  
-  /* General Body Styles */
-  body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--brazil-beige);
-    color: #333;
-  }
-  
-  /* Brazil Page Layout */
-  .brazil-page {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  /* Header Styles */
-  .brazil-header {
-    background-color: var(--brazil-yellow);
-    padding: 2rem 1rem;
-    text-align: center;
-    position: relative;
-  }
-  
+  --brazil-yellow: #ffea07;
+  --brazil-green: #007E3A;
+  --brazil-white: #ffffff;
+  --brazil-beige: #F5F1E6;
+}
+
+/* General Body Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--brazil-beige);
+  color: #333;
+}
+
+/* Brazil Page Layout */
+.brazil-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header Styles */
+.brazil-header {
+  background-color: var(--brazil-yellow);
+  padding: 2rem 1rem;
+  text-align: center;
+  position: relative;
+}
+
+.brazil-header h1 {
+  color: var(--brazil-green);
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.brazil-header::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: var(--brazil-green);
+  margin-top: 1rem;
+}
+
+/* Green Stripe */
+.green-stripe {
+  height: 0.75rem;
+  background-color: var(--brazil-green);
+}
+
+/* Main Content */
+.main-content {
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.background-fallback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Panels */
+.data-panel,
+.weather-panel {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0;
+  margin: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.data-panel h2,
+.weather-panel h2 {
+  background-color: var(--brazil-green);
+  color: var(--brazil-white);
+  padding: 0.75rem 1rem;
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.5rem;
+  border-radius: 8px 8px 0 0;
+}
+
+.data-content,
+.weather-content {
+  padding: 1rem;
+}
+
+.data-row {
+  display: flex;
+  margin-bottom: 0.5rem;
+  align-items: baseline;
+}
+
+.data-label {
+  font-weight: 600;
+  width: 120px;
+  text-align: right;
+  margin-right: 0.5rem;
+}
+
+.data-value {
+  flex: 1;
+}
+
+.data-panel::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--brazil-green);
+  margin-top: 1rem;
+}
+
+/* Weather Icons */
+.weather-icon-desktop {
+  margin-left: 0.5rem;
+  display: none;
+}
+
+.weather-icon-mobile {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem auto;
+}
+
+.weather-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.weather-panel::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--brazil-green);
+  margin-top: 1rem;
+}
+
+/* Footer Styles */
+.brazil-footer {
+  background-color: var(--brazil-yellow);
+  color: var(--brazil-green);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+.last-modified {
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
+}
+
+/* Mobile-Specific Styles */
+@media (max-width: 767px) {
   .brazil-header h1 {
-    color: var(--brazil-green);
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin: 0;
+      font-size: 2rem;
   }
-  
-  .brazil-header::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 5px;
-    background-color: var(--brazil-green);
-    margin-top: 1rem;
-  }
-  
-  /* Green Stripe */
-  .green-stripe {
-    height: 0.75rem;
-    background-color: var(--brazil-green);
-  }
-  
-  /* Main Content */
-  .main-content {
-    flex: 1;
-    padding: 0;
-    position: relative;
-    background-image: url('../images/large.jpg'); /* Default background image */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 400px; /* Ensure the element has height */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* Responsive Background Images */
-  @media (max-width: 767px) {
-    .main-content {
-      background-image: url('../images/small.jpg'); /* Mobile background image */
-      min-height: 300px; /* Adjust height for mobile */
-    }
-  }
-  
-  /* Panels */
+
   .data-panel,
   .weather-panel {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 0;
-    margin: 1rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    max-width: 400px;
-    width: 100%;
-  }
-  
-  .data-panel h2,
-  .weather-panel h2 {
-    background-color: var(--brazil-green);
-    color: var(--brazil-white);
-    padding: 0.75rem 1rem;
-    margin: 0;
-    font-weight: 600;
-    font-size: 1.5rem;
-    border-radius: 8px 8px 0 0;
-  }
-  
-  .data-content,
-  .weather-content {
-    padding: 1rem;
-  }
-  
-  .data-row {
-    display: flex;
-    margin-bottom: 0.5rem;
-    align-items: baseline;
-  }
-  
-  .data-label {
-    font-weight: 600;
-    width: 120px;
-    text-align: right;
-    margin-right: 0.5rem;
-  }
-  
-  .data-value {
-    flex: 1;
-  }
-  
-  .data-panel::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: var(--brazil-green);
-    margin-top: 1rem;
-  }
-  
-  /* Weather Icons */
-  .weather-icon-desktop {
-    margin-left: 0.5rem;
-    display: none;
-  }
-  
-  .weather-icon-mobile {
-    display: block;
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 1rem auto;
-  }
-  
-  .weather-data {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .weather-panel::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: var(--brazil-green);
-    margin-top: 1rem;
-  }
-  
-  /* Footer Styles */
-  .brazil-footer {
-    background-color: var(--brazil-yellow);
-    color: var(--brazil-green);
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-  }
-  
-  .last-modified {
-    margin-top: 0.25rem;
-    font-size: 0.8rem;
-  }
-  
-  /* Mobile-Specific Styles */
-  @media (max-width: 767px) {
-    .brazil-header h1 {
-      font-size: 2rem;
-    }
-  
-    .data-panel,
-    .weather-panel {
       width: 100%;
       margin: 1rem 0;
-    }
-  
-    .data-row {
+  }
+
+  .data-row {
       flex-direction: column;
       margin-bottom: 0.75rem;
-    }
-  
-    .data-label {
+  }
+
+  .data-label {
       width: 100%;
       text-align: left;
       margin-bottom: 0.25rem;
-    }
   }
+}
   
   
