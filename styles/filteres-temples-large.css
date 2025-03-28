@@ -1,0 +1,22 @@
+/* Larger View Styles */
+@media (min-width: 768px) {
+  #nav-menu {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+  }
+
+  #hamburger {
+    display: none;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

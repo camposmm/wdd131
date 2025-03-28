@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Filterable temple gallery with lazy loading">
+  <title>Temple Filter Gallery</title>
+  <meta name="author" content="Marcos Murilo Campos">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+  <link rel="stylesheet" href="styles/filtered-temples-large.css" media="(min-width: 768px)">
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Temple Gallery</h1>
+    <nav>
+      <button id="hamburger">&#9776;</button>
+      <ul id="nav-menu">
+        <li><a href="#" class="nav-link" data-filter="all">Home</a></li>
+        <li><a href="#" class="nav-link" data-filter="old">Old</a></li>
+        <li><a href="#" class="nav-link" data-filter="new">New</a></li>
+        <li><a href="#" class="nav-link" data-filter="large">Large</a></li>
+        <li><a href="#" class="nav-link" data-filter="small">Small</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Temple Gallery</h2>
+    <div id="temple-cards" class="gallery">
+      <!-- Temple cards will be dynamically generated here -->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="current-year"></span> | Marcos Murilo Campos | Brazil</p>
+    <p>Last Modified: <span id="last-modified"></span></p>
+  </footer>
+</body>
+</html>

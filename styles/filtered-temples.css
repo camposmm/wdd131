@@ -1,0 +1,94 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #444;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#nav-menu.active {
+  display: flex;
+}
+
+#nav-menu li {
+  padding: 0.5rem;
+}
+
+#nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+
+#nav-menu a:hover {
+  background-color: #555;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.temple-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.temple-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.temple-info {
+  padding: 1rem;
+}
+
+.temple-info h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.temple-info p {
+  margin: 0.5rem 0;
+  color: #666;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
