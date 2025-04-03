@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A Submited form">
+    <title>Review Submitted</title>
+    <meta name="author" content="Marcos Murilo Campos">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    <script>
+        // Track review count
+        document.addEventListener('DOMContentLoaded', function() {
+            let reviewCount = localStorage.getItem('reviewCount') || 0;
+            reviewCount++;
+            localStorage.setItem('reviewCount', reviewCount);
+            
+            document.getElementById('reviewCount').textContent = reviewCount;
+            
+            // Display submitted data from URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('productName')) {
+                const productId = urlParams.get('productName');
+                const productName = getProductNameById(productId);
+                document.getElementById('submittedProduct').textContent = productName;
+            }
+            if (urlParams.has('rating')) {
+                document.getElementById('submittedRating').textContent = `${urlParams.get('rating')} stars`;
+            }
+            if (urlParams.has('installDate')) {
+                document.getElementById('submittedDate').textContent = urlParams.get('installDate');
+            }
+            
+            // Set current year in footer
+            document.getElementById('currentyear').textContent = new Date().getFullYear();
+            document.getElementById('lastModified').textContent = `Last Modified: ${document.lastModified}`;
+        });
+        
+        function getProductNameById(id) {
+            const products = [
+                { id: "fc-1888", name: "Flux Capacitor" },
+                { id: "fc-2050", name: "Power Laces" },
+                { id: "fs-1987", name: "Time Circuits" },
+                { id: "ac-2000", name: "Low Voltage Reactor" },
+                { id: "jj-1969", name: "Warp Equalizer" }
+            ];
+            
+            const product = products.find(p => p.id === id);
+            return product ? product.name : 'Unknown Product';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Thank You for Your Review!</h1>
+    </header>
+
+    <main>
+        <section class="confirmation">
+            <h2>Review Submitted Successfully</h2>
+            <p>We appreciate you taking the time to share your experience with us.</p>
+            
+            <div class="submitted-data">
+                <h3>Your Review Details:</h3>
+                <p><strong>Product:</strong> <span id="submittedProduct"></span></p>
+                <p><strong>Rating:</strong> <span id="submittedRating"></span></p>
+                <p><strong>Installation Date:</strong> <span id="submittedDate"></span></p>
+            </div>
+            
+            <div class="review-count">
+                <p>You have submitted <span id="reviewCount">0</span> reviews in total.</p>
+            </div>
+            
+            <a href="form.html" class="button">Submit Another Review</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="currentyear"></span> | Marcos Murilo Campos | WDD 131</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
