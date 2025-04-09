@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
+     // Set current year and last modified date
+     const currentYear = new Date().getFullYear();
+     document.getElementById('current-year').textContent = currentYear;
+     
+     const lastModified = document.lastModified;
+     document.getElementById('last-modified').textContent = lastModified;
     // Trail data
     const trails = [
         {
