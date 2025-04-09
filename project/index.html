@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pacific Trail Hikes offers guided hiking tours along the scenic Pacific coastline and mountain trails.">
+    <title>Pacific Trail Hikes | Guided Hiking Adventures</title>
+    <meta name="author" content="Marcos Murilo Campos">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/utilities.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" aria-label="Mountain logo">
+                    <path d="M25 5 L5 45 L45 45 Z" fill="#2E7D32" />
+                    <path d="M25 15 L10 45 L40 45 Z" fill="#4CAF50" />
+                    <path d="M25 25 L15 45 L35 45 Z" fill="#81C784" />
+                </svg>
+                <h1>Pacific Trail Hikes</h1>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item active"><a href="index.html">Home</a></li>
+                    <li class="nav-item"><a href="trails.html">Trails</a></li>
+                    <li class="nav-item"><a href="events.html">Events</a></li>
+                    <li class="nav-item"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-image-container">
+                <picture>
+                    <!-- Responsive image sources -->
+                    <source media="(max-width: 600px)" srcset="images/hero-mobile.jpg">
+                    <source media="(max-width: 1024px)" srcset="images/hero-tablet.jpg">
+                    <img src="images/hero.jpg" alt="Hikers enjoying a scenic mountain trail" loading="eager" class="hero-image">
+                </picture>
+                <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Discover the Pacific Wilderness</h2>
+                    <p>Join our expert guides on unforgettable hiking adventures through pristine landscapes.</p>
+                    <a href="events.html" class="btn btn-primary">Book Your Hike</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-hikes">
+            <div class="container">
+                <h2>Featured Hikes</h2>
+                <div class="hike-grid">
+                    <article class="hike-card">
+                        <img src="images/coastal-trail.jpg" alt="Coastal Trail" loading="lazy" class="hike-image">
+                        <div class="hike-info">
+                            <h3>Coastal Bluff Trail</h3>
+                            <div class="hike-meta">
+                                <span class="difficulty easy">Easy</span>
+                                <span class="distance">3 miles</span>
+                                <span class="duration">2 hours</span>
+                            </div>
+                            <p>Stunning ocean views along this accessible trail perfect for all skill levels.</p>
+                            <a href="trails.html#coastal" class="btn btn-secondary">Learn More</a>
+                        </div>
+                    </article>
+                    
+                    <article class="hike-card">
+                        <img src="images/mountain-summit.jpg" alt="Mountain Summit" loading="lazy" class="hike-image">
+                        <div class="hike-info">
+                            <h3>Eagle Peak Summit</h3>
+                            <div class="hike-meta">
+                                <span class="difficulty moderate">Moderate</span>
+                                <span class="distance">5.5 miles</span>
+                                <span class="duration">4 hours</span>
+                            </div>
+                            <p>Challenging hike rewarded with panoramic views from the summit.</p>
+                            <a href="trails.html#eagle-peak" class="btn btn-secondary">Learn More</a>
+                        </div>
+                    </article>
+                    
+                    <article class="hike-card">
+                        <img src="images/waterfall-trail.jpg" alt="Waterfall Trail" loading="lazy" class="hike-image">
+                        <div class="hike-info">
+                            <h3>Hidden Falls Loop</h3>
+                            <div class="hike-meta">
+                                <span class="difficulty hard">Hard</span>
+                                <span class="distance">8 miles</span>
+                                <span class="duration">6 hours</span>
+                            </div>
+                            <p>Full-day adventure through old-growth forest to a spectacular waterfall.</p>
+                            <a href="trails.html#hidden-falls" class="btn btn-secondary">Learn More</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2>What Our Hikers Say</h2>
+                <div class="testimonial-slider">
+                    <div class="testimonial active">
+                        <blockquote>
+                            "The Coastal Bluff Trail was absolutely breathtaking! Our guide was knowledgeable and made the experience unforgettable."
+                        </blockquote>
+                        <cite>- Sarah J.</cite>
+                    </div>
+                    <div class="testimonial">
+                        <blockquote>
+                            "Challenging but rewarding hike to Eagle Peak. The views at the top were worth every step!"
+                        </blockquote>
+                        <cite>- Michael T.</cite>
+                    </div>
+                    <div class="testimonial">
+                        <blockquote>
+                            "Perfect family outing on the Redwood Grove Trail. Our kids loved learning about the forest ecosystem."
+                        </blockquote>
+                        <cite>- The Chen Family</cite>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-prev" aria-label="Previous testimonial">❮</button>
+                    <div class="slider-dots"></div>
+                    <button class="slider-next" aria-label="Next testimonial">❯</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready for Your Adventure?</h2>
+                    <p>Join our mailing list to receive updates on new trails and special events.</p>
+                    <form id="newsletter-form" class="newsletter-form">
+                        <input type="email" id="newsletter-email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                    <div id="newsletter-message" class="form-message"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Pacific Trail Hikes</h3>
+                    <p>Guiding you through the Pacific wilderness since 2010.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="trails.html">Trails</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <address>
+                        <p>123 Forest Trail Rd</p>
+                        <p>Pacific Grove, CA 93950</p>
+                        <p><a href="tel:+18005551234">(800) 555-1234</a></p>
+                        <p><a href="mailto:info@pacifichikes.com">info@pacifichikes.com</a></p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Pacific Trail Hikes. All rights reserved. Marcos Murilo Campos</p>
+                <p><a href="references.html">References</a></p>
+                <p>Last updated: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Pacific Trail Hikes for questions or to book your hiking adventure.">
+    <title>Contact Us | Pacific Trail Hikes</title>
+    <meta name="author" content="Marcos Murilo Campos">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/utilities.css">
+    <script src="scripts/contact.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" aria-label="Mountain logo">
+                    <path d="M25 5 L5 45 L45 45 Z" fill="#2E7D32" />
+                    <path d="M25 15 L10 45 L40 45 Z" fill="#4CAF50" />
+                    <path d="M25 25 L15 45 L35 45 Z" fill="#81C784" />
+                </svg>
+                <h1>Pacific Trail Hikes</h1>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html">Home</a></li>
+                    <li class="nav-item"><a href="trails.html">Trails</a></li>
+                    <li class="nav-item"><a href="events.html">Events</a></li>
+                    <li class="nav-item active"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-hero">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Have questions? We're here to help you plan your perfect hiking adventure.</p>
+            </div>
+        </section>
+
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <address>
+                            <p><i class="fas fa-map-marker-alt"></i> 123 Forest Trail Rd, Pacific Grove, CA 93950</p>
+                            <p><i class="fas fa-phone"></i> <a href="tel:+18005551234">(800) 555-1234</a></p>
+                            <p><i class="fas fa-envelope"></i> <a href="mailto:info@pacifichikes.com">info@pacifichikes.com</a></p>
+                        </address>
+                        
+                        <div class="business-hours">
+                            <h4>Business Hours</h4>
+                            <p>Monday - Friday: 9am - 5pm</p>
+                            <p>Saturday: 8am - 4pm</p>
+                            <p>Sunday: Closed</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h3>Send Us a Message</h3>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="contact-name">Name</label>
+                                <input type="text" id="contact-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email</label>
+                                <input type="email" id="contact-email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-message-text">Message</label>
+                                <textarea id="contact-message-text" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                        <div id="contact-message" class="form-message"></div>
+                    </div>
+                </div>
+                
+                <div class="map-container">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What should I bring on a hike?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We recommend bringing the following items on all hikes:</p>
+                        <ul>
+                            <li>Sturdy hiking shoes or boots</li>
+                            <li>Weather-appropriate clothing (layers are best)</li>
+                            <li>At least 1 liter of water per person</li>
+                            <li>High-energy snacks</li>
+                            <li>Sunscreen and hat</li>
+                            <li>Small backpack to carry your items</li>
+                        </ul>
+                        <p>For longer or more difficult hikes, we'll provide a more detailed packing list when you book.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is your cancellation policy?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We understand that plans change. Our cancellation policy is as follows:</p>
+                        <ul>
+                            <li><strong>More than 7 days before hike:</strong> Full refund</li>
+                            <li><strong>3-7 days before hike:</strong> 50% refund</li>
+                            <li><strong>Less than 3 days before hike:</strong> No refund, but we may be able to reschedule depending on availability</li>
+                        </ul>
+                        <p>If we cancel due to weather or other safety concerns, you'll receive a full refund or the option to reschedule.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Are your hikes suitable for children?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Many of our hikes are family-friendly, especially our Easy-rated trails. We recommend:</p>
+                        <ul>
+                            <li><strong>Ages 5+:</strong> Coastal Bluff Trail and Redwood Grove Trail</li>
+                            <li><strong>Ages 10+:</strong> Most Moderate trails for active children</li>
+                            <li><strong>Teens:</strong> Can often handle our Hard trails if they're experienced hikers</li>
+                        </ul>
+                        <p>Please contact us to discuss your family's specific needs and we can recommend the best options.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What happens in case of bad weather?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We monitor weather conditions closely and prioritize safety. Our policy is:</p>
+                        <ul>
+                            <li>Light rain: Hikes proceed with proper gear (we can provide rain ponchos)</li>
+                            <li>Heavy rain/storms: Hike may be rescheduled or cancelled</li>
+                            <li>Extreme heat: May modify route or start time</li>
+                            <li>High winds: Coastal hikes may be rescheduled</li>
+                        </ul>
+                        <p>We'll notify you by email or phone at least 12 hours in advance if changes are needed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Pacific Trail Hikes</h3>
+                    <p>Guiding you through the Pacific wilderness since 2010.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="trails.html">Trails</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <address>
+                        <p>123 Forest Trail Rd</p>
+                        <p>Pacific Grove, CA 93950</p>
+                        <p><a href="tel:+18005551234">(800) 555-1234</a></p>
+                        <p><a href="mailto:info@pacifichikes.com">info@pacifichikes.com</a></p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Pacific Trail Hikes. All rights reserved. Marcos Murilo Campos</p>
+                <p><a href="references.html">References</a></p>
+                <p>Last updated: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our hiking trails with Pacific Trail Hikes. Find the perfect trail for your adventure.">
+    <title>Trails | Pacific Trail Hikes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/utilities.css">
+    <script src="scripts/trails.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" aria-label="Mountain logo">
+                    <path d="M25 5 L5 45 L45 45 Z" fill="#2E7D32" />
+                    <path d="M25 15 L10 45 L40 45 Z" fill="#4CAF50" />
+                    <path d="M25 25 L15 45 L35 45 Z" fill="#81C784" />
+                </svg>
+                <h1>Pacific Trail Hikes</h1>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html">Home</a></li>
+                    <li class="nav-item active"><a href="trails.html">Trails</a></li>
+                    <li class="nav-item"><a href="events.html">Events</a></li>
+                    <li class="nav-item"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="trail-hero">
+            <div class="container">
+                <h2>Our Trails</h2>
+                <p>Find your perfect adventure with our diverse selection of hiking trails.</p>
+            </div>
+        </section>
+
+        <section class="trail-filter">
+            <div class="container">
+                <h3>Filter by Difficulty:</h3>
+                <div class="filter-buttons">
+                    <button data-filter="all" class="active">All Trails</button>
+                    <button data-filter="easy">Easy</button>
+                    <button data-filter="moderate">Moderate</button>
+                    <button data-filter="hard">Hard</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="trail-list">
+            <div class="container">
+                <div class="trail-grid">
+                    <article class="trail-card" data-difficulty="easy" id="coastal">
+                        <img src="images/coastal-trail.jpg" alt="Coastal Trail" loading="lazy" class="trail-image">
+                        <div class="trail-info">
+                            <h3>Coastal Bluff Trail</h3>
+                            <div class="trail-meta">
+                                <span class="difficulty easy">Easy</span>
+                                <span class="distance">3 miles</span>
+                                <span class="duration">2 hours</span>
+                            </div>
+                            <p>Stunning ocean views along this accessible trail perfect for all skill levels.</p>
+                            <div class="trail-actions">
+                                <a href="#coastal" class="btn btn-secondary">View Details</a>
+                                <button class="favorite-trail" data-trail-id="coastal">♡ Save to Favorites</button>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="trail-card" data-difficulty="moderate" id="eagle-peak">
+                        <img src="images/mountain-summit.jpg" alt="Mountain Summit" loading="lazy" class="trail-image">
+                        <div class="trail-info">
+                            <h3>Eagle Peak Summit</h3>
+                            <div class="trail-meta">
+                                <span class="difficulty moderate">Moderate</span>
+                                <span class="distance">5.5 miles</span>
+                                <span class="duration">4 hours</span>
+                            </div>
+                            <p>Challenging hike rewarded with panoramic views from the summit.</p>
+                            <div class="trail-actions">
+                                <a href="#eagle-peak" class="btn btn-secondary">View Details</a>
+                                <button class="favorite-trail" data-trail-id="eagle-peak">♡ Save to Favorites</button>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="trail-card" data-difficulty="hard" id="hidden-falls">
+                        <img src="images/waterfall-trail.jpg" alt="Waterfall Trail" loading="lazy" class="trail-image">
+                        <div class="trail-info">
+                            <h3>Hidden Falls Loop</h3>
+                            <div class="trail-meta">
+                                <span class="difficulty hard">Hard</span>
+                                <span class="distance">8 miles</span>
+                                <span class="duration">6 hours</span>
+                            </div>
+                            <p>Full-day adventure through old-growth forest to a spectacular waterfall.</p>
+                            <div class="trail-actions">
+                                <a href="#hidden-falls" class="btn btn-secondary">View Details</a>
+                                <button class="favorite-trail" data-trail-id="hidden-falls">♡ Save to Favorites</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="trail-detail">
+            <!-- Dynamic content will be inserted here by JavaScript -->
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Pacific Trail Hikes</h3>
+                    <p>Guiding you through the Pacific wilderness since 2010.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="trails.html">Trails</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <address>
+                        <p>123 Forest Trail Rd</p>
+                        <p>Pacific Grove, CA 93950</p>
+                        <p><a href="tel:+18005551234">(800) 555-1234</a></p>
+                        <p><a href="mailto:info@pacifichikes.com">info@pacifichikes.com</a></p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Pacific Trail Hikes. All rights reserved.</p>
+                <p><a href="references.html">References</a></p>
+                <p>Last updated: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
